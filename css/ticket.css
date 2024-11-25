@@ -1,0 +1,380 @@
+html {
+    height: 100%;
+}
+
+
+
+
+#rectangle-2 {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: -2;            
+}
+#rectangle-1 {
+    position: absolute;
+    width: 60em;
+    height: 40em;
+    background: white;
+    left: 30em;
+    top: 200px;
+    border-radius: 14px;
+    box-shadow: 1px 1px 4px rgb(150, 150, 150);
+   
+}
+
+
+
+
+body {
+    font-family: 'Poppins';
+    background: rgb(239, 242, 251);
+}
+#submit_btn {
+    font-family: 'Poppins';
+    color: white;
+    border: none;
+    height: 8.5%;
+    width: 90%;
+    position: absolute;
+    top: 27em;
+    left: 5%;
+    right: 5%;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #2d55b4;
+    border-radius: 15px;
+}
+
+
+
+
+#submit_btn:hover {
+    background-color: rgb(57, 96, 230);
+}
+
+
+
+
+label {
+    color: black;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 400px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    left: 60px;
+}
+
+
+
+
+
+
+
+
+.title_box input{
+    font-family: 'Poppins';
+    background-color: white;
+    position: absolute ;
+    height: 1.5em;
+    width: 87.5%;
+    left: 5%;
+    outline-color: #2D55B4;
+    font-size: 20px;
+    top: 4em;
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: rgba(220,220,220, 0.7);
+    padding: .5em;
+}
+
+
+
+
+
+
+
+
+.title_box::placeholder {
+    color: rgb(150, 150, 150);
+    z-index: 20;
+    font-family: 'sans-serif';
+}
+
+
+
+
+.ticket_head{
+    position: absolute;
+    top: 9em;
+
+
+
+
+}
+
+
+
+
+a:hover{
+    color: #2D55B4;
+}
+
+
+
+
+textarea {
+    position: relative;
+    font-family: 'Poppins';
+    background-color: white;
+    height: 13em;
+    width: 87.5%;
+    left: 5%;
+    right: 5%;
+    border-radius: 15px;
+    outline: none;
+    overflow: hidden;
+    top: 8em;
+    resize:none;
+    font-size: 20px;
+    outline-color: #2D55B4;
+    border: 2px solid;
+    border-color: rgba(220,220,220, 0.7);
+    padding: .5em;
+}
+
+
+
+
+textarea:focus {
+    border-color: #2D55B4;
+}
+
+
+
+
+textarea::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+
+
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(120, 0, 16);
+}
+
+
+
+
+#fake_textarea:hover {
+    background-color: rgb(225, 225, 225);
+    border: 1px solid;
+}
+
+
+
+
+h1 {
+    position: absolute;
+    color: rgb(45, 85, 180);
+    font-family: 'Poppins';
+    left: 300px;
+    top: 100px;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+body {
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    background-color: #EFF2FB;
+}
+
+
+
+
+.top-box{
+    position: absolute;
+    top: 0;
+    width: 1535px;
+    height: 100px;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+
+
+
+.avatar {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    right: 400px;
+    top: 20px;
+    color: #313442;
+   
+  }
+
+
+
+
+
+
+
+
+  .list_table{
+    position: fixed;
+    bottom: 500px;
+    z-index: 100;
+    left: 50%;
+  }
+
+
+
+
+  .sidebar-wrapper {
+    position: relative;
+    width: 260px;
+    height: 100vh;
+    transition: width 0.3s ease-in-out;
+}
+
+
+
+
+.sidebar-wrapper:hover {
+    width: 260px;
+}
+
+
+
+
+.sidebar {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    border-radius: 0% 30px 30px 0%;
+    background-color: #313442;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+
+
+.sidebar-wrapper:not(:hover) .sidebar {
+    width: 150px;
+}
+
+
+
+
+.sidediv {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.sidebar li {
+    list-style: none;
+    margin-bottom: 70px;
+    font-size: 21px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.sidebar-wrapper:not(:hover) .sidebar li {
+    font-size: 0;
+}
+
+
+
+
+.sidebar-wrapper:not(:hover) .sidebar i {
+    font-size: 24px;
+}
+
+
+
+
+.sidediv i {
+    margin-right: 10px;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.sidebar li:hover {
+    transform: translateX(10px);
+}
+
+
+
+
+.sidebar-wrapper .sidebar li {
+    list-style: none;
+    margin-bottom: 100px;
+    font-size: 21px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+.sidebar-wrapper .sidebar li.active {
+    color: white;
+    border-left: 8px solid #ffffff;
+    padding-left: 10px;
+}
+
+
+
+
+ul li:nth-child(4){
+    font-weight: bolder;
+}
+
+
+@media (max-width: 600px){}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="module" src="/JS/review.js"></script>
+    <title>Ticket Review</title>
+</head>
+<body>
+    <div id="rectangle-top"></div>
+    <div class="sidebar">
+        <div class="sidediv">
+            <ul>
+                <li><a href="manager_dash.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-note-sticky"></i>Assign</a></li>
+                <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
+                <li><a href="manager_hist.html"><i class="fa-regular fa-file"></i>History</a></li>
+                <li><a href="manager_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
+                <li><a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>Tickets</h1>
+
+    <div class="rectangle-1">
+        <table class="list_review" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Profile</th>
+                    <th>Title</th>
+                    <th>Complaint</th>
+                    <th>Technician</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="title_body">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+<div id="loadingTechnicians" style="display: none; text-align: center; font-size: 16px; color: #555;">
+    Loading technicians...
+</div>
+
+
+<div id="reviewModal" class="modal">
+    <div class="modal-content">
+        
+        <section class="ticket-info">
+            <header class="modal-header">
+                <h2>Ticket Details</h2>
+                <p><strong></strong> <span id="modalTimestamp" style="opacity: 0.5;"></span></p>
+                <button id="closeModal" class="close-btn">X</button>
+            </header>
+            <div class="modal-body">
+                <img id="modalTechnicianImage" src="" alt="Technician Profile Image">
+                <p><strong>Username:</strong> <span id="modalUsername"></span></p>
+                <p><strong>Title:</strong> <span id="modalTitle"></span></p>
+                <p><strong>Content:</strong> <span id="modalContent"></span></p>
+                <p><strong>Assigned Technician:</strong> <span id="modalTechnician"></span></p>
+            </div>
+        </section>
+    
+       
+        <section class="technician-select">
+            <p><strong>Assign Technician:</strong></p>
+            <select id="technicianSelect">
+                <option value="">Choose Technician</option>
+               
+            </select>
+            <button id="confirmTechnicianButton">Confirm Technician</button>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>

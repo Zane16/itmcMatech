@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    background-color: #EFF2FB;
+    font-family: Poppins, sans-serif;
+}
+
+
+.sidebar-wrapper {
+    position: relative;
+    width: 260px;
+    height: 100vh;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.sidebar-wrapper:hover {
+    width: 260px;
+}
+
+
+.sidebar {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    border-radius: 0% 30px 30px 0%;
+    background-color: #313442;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+.sidebar-wrapper:not(:hover) .sidebar {
+    width: 150px;
+}
+
+
+.sidediv {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.sidebar li {
+    list-style: none;
+    margin-bottom: 70px;
+    font-size: 21px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.sidebar-wrapper:not(:hover) .sidebar li {
+    font-size: 0;
+}
+
+
+.sidebar-wrapper:not(:hover) .sidebar i {
+    font-size: 24px;
+}
+
+
+.sidediv i {
+    margin-right: 10px;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.sidebar li:hover {
+    transform: translateX(10px);
+}
+
+
+.sidebar-wrapper .sidebar li {
+    list-style: none;
+    margin-bottom: 100px;
+    font-size: 21px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.sidebar-wrapper .sidebar li.active {
+    color: white;
+    border-left: 8px solid #ffffff;
+    padding-left: 10px;
+}
+
+
+
+
+ul li:nth-child(4){
+    font-weight: bolder;
+}
+
+
+.top-box {
+    position: absolute;
+    top: 0;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 100px;
+    background-color: #ffffff;
+}
+
+
+.avatar {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    right: 30px;
+    top: 20px;
+}
+
+
+.hist {
+    position: absolute;
+    font-size: 40px;
+    left: 300px;
+    top: 120px;
+    color: #2D55B4;
+}
+
+
+.table {
+    position: absolute;
+    width: 1200px;
+    top: 200px;
+    left: 300px;
+    background-color: #ffffff;
+    font-family: Poppins;
+}
+
+
+.table-content {
+    border-collapse: collapse;
+    width: 100%;
+}

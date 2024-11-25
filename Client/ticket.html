@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta NAME="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/ticket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="module" src="/JS/ticket.js"></script>
+
+</head>
+<body>
+    <div class="sidebar-wrapper">
+        <div class="sidebar">
+            <div class="sidediv">
+                <ul>
+                    <li><a href="dashboard-client.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="active"><a href="ticket.html"><i class="fa-solid fa-note-sticky"></i>Request</a></li>
+                    <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
+                    <li><a href="history_client.html"><i class="fa-regular fa-file"></i>History</a></li>
+                    <li><a href="client_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
+                    <li><a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="rectangle-2"></div>
+    <h1>Ticket Request</h1>
+
+
+
+
+    <div id="rectangle-1">
+                        <label>Ticket</label>
+                        <div class="title_box">
+                            <input type="text" name="ticket_title" id="ticket_title" placeholder="Ticket Title">
+                        </div>
+
+
+
+
+                        <div class="ticket_head">
+                            <label>Ticket Body</label>
+                        </div>
+                           
+                            <textarea class="text_body" id="ticket_body" placeholder="Write Here..."></textarea>
+
+                            <button id="submit_btn" onclick="clearInput()">Submit</button>              
+    </div>
+</body>
+<script>
+   
+</script>
+</html>
+
+
