@@ -23,6 +23,7 @@ let ticket_body = document.getElementById('ticket_body');
 let submit_btn = document.getElementById('submit_btn');
 
 async function AddData() {
+    // Check if required fields are filled
     if (!ticket_title.value || !ticket_body.value) {
         alert("Please fill in all fields!");
         return;
@@ -30,13 +31,16 @@ async function AddData() {
 
     const user = auth.currentUser;
 
+    // Ensure user is authenticated
     if (!user) {
         alert("User not authenticated.");
+        console.log("auth.currentUser is null.");
         return;
     }
 
     try {
-        const userDocRef = doc(db, "users", user.uid); // Access the user's document in the "users" collection
+        // Fetch user document
+        const userDocRef = doc(db, "users", user.uid);
         const userDoc = await getDoc(userDocRef);
 
         if (!userDoc.exists()) {
@@ -45,27 +49,26 @@ async function AddData() {
         }
 
         const username = userDoc.data().username;
-        const role = userDoc.data().role; // Check the role of the user
+        const role = userDoc.data().role; // Get user role
 
-        // Define the ticket data object
+        // Prepare ticket data
         const ticketData = {
             ticketTitle: ticket_title.value,
             ticketContent: ticket_body.value,
             timestamp: serverTimestamp(),
             username: username,
-            status: "submitted", // Track status as submitted
-            submittedBy: user.uid, // Store who submitted the ticket
-            role: role // Save the role for reference
+            status: "submitted", // Track status
+            submittedBy: user.uid, // Track user ID
+            role: role // Include role for context
         };
 
-        // Add the ticket to the user's sub-collection "userTickets" inside their document
+        // Add ticket to user's "userTickets" sub-collection
         const userTicketsCollectionRef = collection(db, `users/${user.uid}/userTickets`);
         const ticketRef = await addDoc(userTicketsCollectionRef, ticketData);
         console.log("Ticket added to user's userTickets sub-collection:", ticketRef.id);
 
-        // If the user is a client, we also want to add the ticket to managers' documents
+        // If the user is a client, also add the ticket to managers' collections
         if (role === "Client") {
-            // Query to find all users with the role of "Manager"
             const managersQuery = query(collection(db, "users"), where("role", "==", "Manager"));
             const managersSnapshot = await getDocs(managersQuery);
 
@@ -74,13 +77,11 @@ async function AddData() {
                 return;
             }
 
-            // Add the ticket to each manager's "userTickets" sub-collection
             managersSnapshot.forEach(async (managerDoc) => {
                 const managerUid = managerDoc.id; // Get manager's UID
 
                 console.log("Adding ticket to manager's document for UID:", managerUid);
 
-                // Add the ticket to the manager's userTickets sub-collection
                 const managerTicketsCollectionRef = collection(db, `users/${managerUid}/userTickets`);
                 await addDoc(managerTicketsCollectionRef, ticketData);
 
@@ -89,7 +90,7 @@ async function AddData() {
         }
 
         alert("Ticket submitted successfully.");
-        // Clear the input fields
+        // Clear input fields
         ticket_title.value = "";
         ticket_body.value = "";
     } catch (error) {

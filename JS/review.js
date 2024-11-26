@@ -22,20 +22,20 @@ const firebaseConfig = {
     measurementId: "G-MYLH77L240",
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firestore
+
 const db = getFirestore(app);
 
-// Fetch and display tickets
+
 async function fetchAndDisplayTickets() {
     try {
-        const usersQuery = query(collection(db, "users"));
+        const usersQuery = query(collection(db, "users"), where("role", "==", "Client"));  
         const usersSnapshot = await getDocs(usersQuery);
 
         const tableBody = document.querySelector(".title_body");
-        tableBody.innerHTML = ""; // Clear the table
+        tableBody.innerHTML = ""; 
 
         if (usersSnapshot.empty) {
             const noTicketsRow = document.createElement("tr");
@@ -44,20 +44,20 @@ async function fetchAndDisplayTickets() {
             return;
         }
 
-        // Iterate over each user document
+        
         usersSnapshot.forEach(async (userDocSnapshot) => {
             const userId = userDocSnapshot.id;
             const userData = userDocSnapshot.data();
             const username = userData.username || "Anonymous";
 
-            // Get the userTickets subcollection for each user
+            
             const ticketsQuery = query(collection(db, "users", userId, "userTickets"));
             const ticketsSnapshot = await getDocs(ticketsQuery);
 
-            // If no tickets found for this user, skip to the next user
+            
             if (ticketsSnapshot.empty) return;
 
-            // Iterate over each ticket in the userTickets subcollection
+            
             ticketsSnapshot.forEach(async (ticketDocSnapshot) => {
                 const ticket = ticketDocSnapshot.data();
                 const ticketId = ticketDocSnapshot.id;
@@ -72,7 +72,7 @@ async function fetchAndDisplayTickets() {
                 let technicianUsername = "Not Assigned";
                 let technicianProfileImage = "https://via.placeholder.com/50";
                 if (technicianId) {
-                    const technicianRef = doc(db, "users", technicianId); // Reference to the "users" collection
+                    const technicianRef = doc(db, "users", technicianId); 
                     const technicianSnap = await getDoc(technicianRef);
                     if (technicianSnap.exists()) {
                         const technicianData = technicianSnap.data();
@@ -82,7 +82,7 @@ async function fetchAndDisplayTickets() {
                 }
 
                 const newRow = document.createElement("tr");
-                newRow.dataset.userId = userId; // Store the userId here for later use
+                newRow.dataset.userId = userId; 
 
                 newRow.innerHTML = `
                     <td><img src="${profileImage}" alt="Profile Image" style="border-radius: 50%; width: 50px; height: 50px;"></td>
@@ -109,14 +109,14 @@ async function fetchAndDisplayTickets() {
 
                 tableBody.appendChild(newRow);
 
-                // Attach event listeners for the newly added buttons
+               
                 const reviewBtn = newRow.querySelector(".review-btn");
                 const deleteBtn = newRow.querySelector(".delete-btn");
 
-                // Review button click handler
+                
                 reviewBtn.addEventListener("click", handleReview);
 
-                // Delete button click handler
+                
                 deleteBtn.addEventListener("click", handleDelete);
             });
         });
@@ -125,7 +125,7 @@ async function fetchAndDisplayTickets() {
     }
 }
 
-// Fetch and populate the technician dropdown
+
 async function fetchTechnicians() {
     try {
         const usersRef = collection(db, "users");
@@ -133,7 +133,7 @@ async function fetchTechnicians() {
         const querySnapshot = await getDocs(q);
 
         const technicianSelect = document.getElementById("technicianSelect");
-        technicianSelect.innerHTML = `<option value="">Choose Technician</option>`; // Reset the options
+        technicianSelect.innerHTML = `<option value="">Choose Technician</option>`; 
         querySnapshot.forEach((doc) => {
             const technician = doc.data();
             const technicianId = doc.id;
@@ -146,13 +146,12 @@ async function fetchTechnicians() {
             technicianSelect.appendChild(technicianOption);
         });
 
-        document.getElementById("loadingTechnicians").style.display = "none"; // Hide loading text when done
+        document.getElementById("loadingTechnicians").style.display = "none"; 
     } catch (error) {
         console.error("Error fetching technicians:", error);
     }
 }
 
-// Handle the review button click
 async function handleReview(event) {
     const ticketId = event.target.dataset.ticketId;
     const username = event.target.dataset.username;
@@ -161,9 +160,8 @@ async function handleReview(event) {
     const ticketTime = event.target.dataset.time;
     const technicianUsername = event.target.dataset.technician;
     const technicianImage = event.target.dataset.technicianImage;
-    const userId = event.target.closest("tr").dataset.userId; // Correctly get userId here
-
-    // Open the modal
+    const userId = event.target.closest("tr").dataset.userId; 
+    
     const modal = document.getElementById("reviewModal");
     const closeModal = document.getElementById("closeModal");
     const confirmTechnicianButton = document.getElementById("confirmTechnicianButton");
@@ -175,14 +173,13 @@ async function handleReview(event) {
     document.getElementById("modalTechnician").textContent = technicianUsername;
     document.getElementById("modalTechnicianImage").src = technicianImage;
 
-    // Show the modal
+    
     modal.style.display = "block";
 
-    // Close the modal
+   
     closeModal.onclick = () => {
         modal.style.display = "none"; 
     };
-
 
     confirmTechnicianButton.onclick = async () => {
         console.log("Confirm Technician button clicked!"); 
@@ -205,24 +202,23 @@ async function handleReview(event) {
     };
 }
 
-// Handle ticket delete
+
 async function handleDelete(event) {
     const ticketId = event.target.dataset.ticketId;
-    const ticketRef = doc(db, "users", event.target.closest("tr").dataset.userId, "userTickets", ticketId); // Correct reference to userTickets subcollection
+    const ticketRef = doc(db, "users", event.target.closest("tr").dataset.userId, "userTickets", ticketId); 
 
     try {
         await deleteDoc(ticketRef);
         alert("Ticket deleted successfully!");
-        fetchAndDisplayTickets(); // Refresh the ticket list
+        fetchAndDisplayTickets(); 
     } catch (error) {
         console.error("Error deleting ticket:", error);
         alert("Failed to delete ticket.");
     }
 }
 
-// Initialize and fetch tickets and technicians on page load
+
 window.onload = async () => {
-   
     const modal = document.getElementById("reviewModal");
     modal.style.display = "none"; 
 
@@ -230,3 +226,4 @@ window.onload = async () => {
     document.getElementById("loadingTechnicians").style.display = "block"; 
     fetchTechnicians();
 };
+ 
