@@ -11,15 +11,40 @@
         </head>
 
         <body>
+            <div class="about-pop" id="about-pop">
+                <h1>About Us</h1>
+                <h4>A technical support platform that allows you to assign tasks as a manager, send status updates as a technician, and get fast ticket status updates from your submited tickets as a client.</h4>
+                <h3>Who Are We?</h3>
+                <h4>We are a group of third year college students pursuing a Bachelor of Science in Information Technology, and our common objective is to improve the experience of customers requesting tech support. We know how frustrating it may be to navigate ineffective support systems because we have experienced our own difficulties with technical assistance. We are working on a project to enhance customer interactions with tech support services, making them more effective, efficient, and user-friendly, driven by our own experiences. Our project's goal is to develop solutions that tackle typical problems and, in the end, enhance the general customer experience in the tech support sector.</h4>
+                <div type="button" class="done" onclick="closeAbout()">Done</div>
+            </div>
+
+            <div class="contacts-pop" id="contacts-pop">
+                <h1>Contact Us</h1>
+                <div class="Name">
+                    <input type="text" placeholder="Name:">
+                </div>
+                <div class="Email">
+                    <input type="text" placeholder="Email:">
+                </div>
+                <textarea type="text" class="Feedback" placeholder="Write your feedback"></textarea>
+                <div type="button" class="Contactus" onclick="closeContacts()">Submit</div>
+            </div>
+            
             <nav class="navbar">
+                <a href="index.html"><img src="https://i.ibb.co/tKvjY3K/download-6-removebg-preview-2.png" alt="download-6-removebg-preview-2" border="0" id="backimage"></a>
+                
                 <div class="navdiv">
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-circle-info"></i>About</a></li>
-                        <li><a href="#"><i class="fa-regular fa-address-book"></i>Contact</a></li>
+                        
+                        <li><a><div class="about" onclick="openAbout()"><i class="fa-solid fa-circle-info"></i> &nbsp;About</div></a></li>
+
+                        <li><a><div class="contacts" onclick="openContacts()"><i class="fa-solid fa-address-book"></i>Contacts</div></a></li>
                     </ul>
                 </div>
             </nav>
-            <div class="container">
+            <div class="container" id="container">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/P43RZsG/header-logo.gif" alt="header-logo" border="0"></a>
                 <div class="form-box">
                     <h3 class="title1">Register</h3>
                     <form autocomplete="off">
@@ -40,9 +65,34 @@
                         <h2 class="title">or continue with</h2>
                         <button type="button" class="google"><img src="Image/pngwing.com.png" alt="">Sign Up with Google</button>
 
-                        <p class="signup">Have an Account? <a href="Login.html" style="text-decoration: underline;">Sign In Now</a>.</p>
+                        <p class="signup">Have an Account? <a class="signupline" href="Login.html" style="text-decoration: underline;">Sign In</a>.</p>
                     </form>  
                 </div>
             </div>
         </body>
+        <script>
+            let about = document.getElementById("about-pop");
+            let conconcon = document.getElementById("container");
+            let contacts = document.getElementById("contacts-pop");
+            function openAbout(){
+                 about.classList.add('open-popup');
+                 conconcon.classList.add('hide-container');
+                 contacts.classList.remove('open-contacts');
+            }
+            function closeAbout(){
+                 about.classList.remove('open-popup');
+                 conconcon.classList.remove('hide-container');
+            }
+
+            function openContacts(){
+                 contacts.classList.add('open-contacts');
+                 conconcon.classList.add('hide-container');
+                 about.classList.remove('open-popup');
+            }
+
+            function closeContacts(){
+                 contacts.classList.remove('open-contacts');
+                 conconcon.classList.remove('hide-container');
+            }
+        </script>
     </html>

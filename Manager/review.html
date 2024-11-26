@@ -15,7 +15,7 @@
         <div class="sidediv">
             <ul>
                 <li><a href="manager_dash.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="#"><i class="fa-solid fa-note-sticky"></i>Manage</a></li>
+                <li><a href="#"><i class="fa-solid fa-note-sticky"></i>Assign</a></li>
                 <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
                 <li><a href="manager_hist.html"><i class="fa-regular fa-file"></i>History</a></li>
                 <li><a href="manager_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
@@ -31,11 +31,11 @@
             <thead>
                 <tr>
                     <th>Profile</th>
-                    <th>Title</th>
-                    <th>Complaint</th>
-                    <th>Technician</th>
-                    <th>Action</th>
-                    <th>Action</th>
+                    <th>Name</th>
+                    <th>Ticket Title</th>
+                    <th>Time</th>
+                    <th>Assigned to</th>
+                    <th></th>
                     <th></th>
                 </tr>
             </thead>
@@ -56,7 +56,8 @@
         
         <section class="ticket-info">
             <header class="modal-header">
-                <h2>Ticket Details</h2>
+                <h2>Ticket Details&nbsp;</h2> 
+                
                 <p><strong></strong> <span id="modalTimestamp" style="opacity: 0.5;"></span></p>
                 <button id="closeModal" class="close-btn">X</button>
             </header>

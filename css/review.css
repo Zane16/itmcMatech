@@ -254,32 +254,49 @@ body.modal-open {
 /* Table styles */
 .list_review {
     width: 100%;
+    max-height: 1000px; 
     border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    max-height: 400px;
-    
+ 
 }
 
 .list_review th,
 .list_review td {
     padding: 15px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
     font-family: 'Poppins', sans-serif;
 }
 
+.list_review thead {
+    
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Ensure columns are evenly distributed */
+}
+
 .list_review th {
+    
     background-color: #030424;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-.list_review tr:hover {
-    background-color: #f5f5f5;
-    cursor: pointer;
+.list_review tbody {
+    max-height: 600px;
+    overflow-y: auto;
+    display: block;
+    width: 100%; 
+}
+
+.list_review tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
 
 .list_review td {
@@ -287,12 +304,9 @@ body.modal-open {
     vertical-align: middle;
 }
 
-.profile-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+
+.list_review td, .list_review th {
+    width: 25%; 
 }
 
 /* Action buttons */
@@ -333,27 +347,32 @@ body.modal-open {
     left: 20em;
     top: 10em;
     margin: 20px auto;
-    overflow-x: auto;
-    border-radius: 10px;
     padding: 10px;
-    background-color: #fafafa;
+    background-color: #fafafa; 
+    max-height: 1000px; 
+    overflow-y: auto; 
+    border-radius: 10px;
 }
 
 .title_body {
     max-height: 400px; 
-    overflow-y: auto;  
-
-    
 }
 
 .list_review th {
     position: sticky;
     top: 0; 
     z-index: 1;
+    
 }
 
 .modal-body img{
     height: 100px;
     width: 100px;
     border-radius: 50%;
+}
+
+.list_review tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; 
 }
