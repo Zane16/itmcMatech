@@ -1,206 +1,322 @@
-body {
+* {
     margin: 0;
-    background: #000000;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- 
+
+body {
+    font-family: 'Poppins';
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../Image/19366.jpg');
+    background-size: cover;
     background-position: center;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Image/19366.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    position: relative;
-    z-index: -1;
-}
-
-*{
-    text-decoration: none;
-}
-.navbar{
-    position: absolute;
-    top: 0;
-    border-radius: 0% 0% 35px 35px;
-    background-color: #313442;
-    font-family: Poppins;
-    width: 100%;
-    height: 90px;
- 
-}
-.navdiv{
-    position: absolute;
+    color: #333;
     display: flex;
-    align-items: center;
-    
-    right: 10px;
-    top: 15px;
-}
-
-li{
-    list-style: none;
-    display: inline-block;
-}
-li a{
-    color: white;
-    font-size: 20px;
-    font-weight: lighter;
-    margin: 60px;
-}
-.title1{
-    margin-top: -10px;
-    margin-bottom: 10px;
-    font-size: 250%;
-    font-family: poppins;
-    font-weight: 100;
-    font-weight: bold;
-}
-
-.container{
-    opacity: 0;
-    animation: slideUp 0.8s ease-out forwards;
-    width: 20%;
-    max-width: 450px;
-    height: 480px;
-    position: absolute;
-    top: 15%;
-    left: 37%;
-    transform: translate(-50%,-50%);
-    background: white;
-    text-align: center;
-    border-radius: 20px;
-    padding: 50px 60px 70px;
-    z-index: 20;
-}
-
-.signup{
-    font-size: 90%;
-    font-family: poppins;
-    font-weight: lighter;
-    margin: 20px 0;
-    opacity: 0.8;
-    
-}
-
-.input-field{
-    height: 15%;
-    margin-top: -5px;
-    
-    align-items: center;
-    display: flex;
-    
-}
-
-
-.input-field input{
-    
-    background: transparent;
-    font-size: 100%;
-    border: none;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 10px;
-
-
-
-
-}
-
-
-.btn{
-    width: 100%;
-    height: 10%;
-    margin: 10px 0;
-    font-size: 17px;
-    color: white;
-    background: transparent;
-    background-color: #313442;
-    border: none;
-    outline: none;
-    border: rgba(0, 0, 0, 1);
-    border-radius: 10px;    
-}
-
-.google{
-    width: 80%;
-    height: 10%;
-    font-size: 100%;
-    color: rgb(0, 0, 0);
-    background-color: #c2c2c2;
-    border: none;
-    border-radius: 30px;  
-    display:inline-flex;
-    align-items: center; 
     justify-content: center;
-    margin: 5px 0;
-    
-
-}
-
-.google img{
-    width: 15%;
-    z-index: 10;
-    
-    
-}
-
-input{
-    width: 100%;
-    background: transparent;
-    font-size: 20px;
-    border-width: 2px;
-    border-color: #000000;
-    border-radius: 7px;
-    outline: 1px;
-    padding: 10px 10px;
-    font-family: Poppins;
-    z-index: 2;
-}
-
-.title{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    white-space: nowrap;
-    font-family:poppins;
-    font-size: 95%;
-    font-weight: 100;
-    margin: 15px 0;
-    opacity: 0.8;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-.title::before, .title::after{
-    content: "";
-    height: 1px;
-    background-color: #000000;
-    display: block;
 
+.budi {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Image/19366.jpg');
 }
 
-.fa-solid{
-    padding-right: 10px;
+
+.navbar {
+position: absolute;
+top: 0;
+background-color: #313442;
+font-family: Poppins, sans-serif;
+width: 100%;
+height: 90px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 30px;
+border-radius: 0 0 35px 35px;
 }
 
-.fa-regular{
-    padding-right: 10px
+
+.navbar ul {
+display: flex;
+gap: 30px;
+list-style: none;
 }
 
-.messageDiv{
-    background-color: #313442;
+
+
+
+.navbar li a {
+color: white;
+font-size: 20px;
+font-weight: lighter;
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 15px;
+margin-right: 60px;
+}
+
+
+.navbar li a:hover {
+    color: #2D55B4;
+    cursor: pointer;
+}
+
+
+
+
+.main-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+
+
+
+.hide-container{
+    visibility: hidden;
+}
+
+
+
+
+.hide-containers{
+    visibility: hidden;
+}
+
+
+
+
+#logob {
+    width: 400px;
+    max-width: 80%;
+}
+
+
+
+
+/* Sign-up buttons styling */
+.signup-box {
+    background-color: #333;
     color: white;
-    padding: 10px, 20px;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 1rem;
-    opacity: 0;
-    animation: fadeOut 7s forwards;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
+.signup-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.signup-box h3 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.signup-box a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Technician button styling */
+.signup-box.technician {
+    background-color: white;
+    color: #333;
+    border: 2px solid #007bff;
+}
+
+.signup-box.technician a {
+    color: #007bff;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .signup-container {
+        flex-direction: column;
+        align-items: center;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    .signup-box {
+        width: 200px;
+        margin: 10px 0;
     }
+}
+
+.about-pop{
+    left: 30%;
+    top: 17%;
+    position: absolute;
+    height: 70%;
+    width: 40%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255);
+    z-index: 6;
+    visibility: hidden;
+}
+
+.open-popup{
+    visibility: visible;
+}
+
+.done {
+    position:absolute;
+    right: 45%;
+    bottom: 5%;
+    padding: 1%;
+    height: 35px;
+    width: 10%;
+    color: white;
+    background-color: rgb(43, 67, 122);
+    z-index: 20;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.done:hover {
+    cursor: pointer;
+    background-color: rgb(52, 81, 146);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: lighter;
+    color: rgb(35,35,35);
+    margin-top: 20px
+}
+
+.about-pop h3 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: lighter;
+    color: rgb(35,35,35);
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.about-pop h4 {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top:3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: lighter;
+    font-size: 75%;
+    color: rgb(40,40,40);
+}
+
+.contacts-pop {
+    left: 35%;
+    top: 17%;
+    position: absolute;
+    height: 70%;
+    width: 30%;
+    background-color: rgba(255, 255, 255);
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.open-contacts{
+    visibility: visible;
+}
+
+.Contactus {
+    position:absolute;
+    right: 35%;
+    bottom: 5%;
+    padding: 1%;
+    height: 35px;
+    width: 30%;
+    color: white;
+    background-color: rgb(43, 67, 122);
+    z-index: 20;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Contactus:hover {
+    cursor: pointer;
+    background-color: rgb(52, 81, 146);
+}
+
+.Name input {
+    font-family: sans-serif;
+    font-weight: lighter;
+    height: 3em;
+    width: 60%;;
+    position: relative;
+    left: 20%;
+    border-radius: 15px;
+    border: solid 2px;
+    padding: 15px;
+    font-size: 16px;
+    border-color: rgba(220, 220, 220, 0.5);
+    outline-color: #2D55B4;
+}
+
+.Name input:focus{
+    border-color: #2D55B4;
+}
+
+.Email input {
+    font-family: sans-serif;
+    font-weight: lighter;
+    height: 3em;
+    width: 60%;;
+    position: relative;
+    left: 20%;
+    border-radius: 15px;
+    border: solid 2px;
+    border-color: rgba(220, 220, 220, 0.5);
+    padding: 0 0;
+    margin-top: 30px;
+    font-size: 16px;
+    outline-color: #2D55B4;
+    padding: 15px;
+}
+
+.Email input:focus{
+    border-color: #2D55B4;
+}
+
+textarea {
+    font-family: sans-serif;
+    font-weight: lighter;
+    width: 60%;;
+    position: relative;
+    left: 20%;
+    height: 40%;
+    border-radius: 15px;
+    border: solid 2px;
+    outline-color: #2D55B4;
+    margin-top: 30px;
+    font-size: 16px;
+    background-color: transparent;
+    resize: none;
+    padding: 15px;
+    border-color: rgba(220, 220, 220, 0.5);
 }

@@ -25,48 +25,92 @@ h1 {
     font-family: 'Poppins', sans-serif;
 }
 
+.sidebar-wrapper {
+    position: absolute;
+    width: 260px;
+    height: 100vh;
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar-wrapper:hover {
+    width: 260px;
+}
+
 .sidebar {
     position: absolute;
     width: 260px;
     height: 100%;
     border-radius: 0% 30px 30px 0%;
     background-color: #313442;
-    z-index: 1;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.sidebar-wrapper:not(:hover) .sidebar {
+    width: 150px;
 }
 
 .sidediv {
     padding: 20px;
     margin-top: 30px;
-    font-family: 'Poppins', sans-serif;
 }
 
-li {
-    width: 170px;
-    list-style: none;
-    margin-left: 10%;
-    margin-bottom: 30px;
-    color: #ffffff;
-    font-size: 21px;
-    cursor: pointer;
-}
-
-a {
+.sidebar a {
     text-decoration: none;
     color: white;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-a:hover {
-    color: #2D55B4;
+.sidebar li {
+    list-style: none;
+    margin-bottom: 100px;
+    font-size: 21px;
+    transition: transform 0.3s ease-in-out;
 }
 
-ul li:nth-child(5) {
-    position: absolute;
-    bottom: 200px;
+.sidebar-wrapper:not(:hover) .sidebar li {
+    font-size: 0;
 }
 
-ul li:nth-child(6) {
-    position: absolute;
-    bottom: 140px;
+.sidebar-wrapper:not(:hover) .sidebar i {
+    font-size: 24px;
+}
+
+.sidediv i {
+    margin-right: 10px;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar li:hover {
+    transform: translateX(10px);
+}
+
+.sidebar-wrapper .sidebar li {
+    list-style: none;
+    margin-bottom: 100px;
+    font-size: 21px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-wrapper .sidebar li.active {
+    color: white;
+    border-left: 8px solid #ffffff;
+    padding-left: 10px;
+}
+
+.sidebar-wrapper .sidebar li.active {
+    color: white;
+    border-left: 8px solid #ffffff;
+    padding-left: 10px;
+}
+
+ul li:nth-child(1){
+    font-weight: bolder;
 }
 
 .fa-solid,
@@ -114,6 +158,8 @@ button {
     max-height: 90%;
     overflow-y: auto;
     z-index: 101;
+    left: 25%;
+    top: 15%;
 }
 
 body.modal-open {
@@ -281,7 +327,6 @@ body.modal-open {
     transform: scale(1.05);
 }
 
-
 .rectangle-1 {
     width: 75%;
     position: absolute;
@@ -297,6 +342,7 @@ body.modal-open {
 .title_body {
     max-height: 400px; 
     overflow-y: auto;  
+
     
 }
 
@@ -306,10 +352,8 @@ body.modal-open {
     z-index: 1;
 }
 
-
 .modal-body img{
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    
 }
