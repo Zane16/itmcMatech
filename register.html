@@ -1,119 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaTech</title>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <meta name="description" content="MaTech - Sign up as Client, Technician, or Manager">
-    <link rel="stylesheet" href="css/index.css">
+<DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta NAME="viewport" content="width=device-width, initial-scale=1.0">
+            <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+            <link rel="stylesheet" href="css/Register.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+            <script type="module" src="JS/register.js" defer></script>
+  
+        </head>
 
-    
-</head>
-<body id="jok">
-    <div class="about-pop" id="about-pop">
-        <h1>About Us</h1>
-        <h4>A technical support platform that allows you to assign tasks as a manager, send status updates as a technician, and get fast ticket status updates from your submited tickets as a client.</h4>
-        <h3>Who Are We?</h3>
-        <h4>We are a group of third year college students pursuing a Bachelor of Science in Information Technology, and our common objective is to improve the experience of customers requesting tech support. We know how frustrating it may be to navigate ineffective support systems because we have experienced our own difficulties with technical assistance. We are working on a project to enhance customer interactions with tech support services, making them more effective, efficient, and user-friendly, driven by our own experiences. Our project's goal is to develop solutions that tackle typical problems and, in the end, enhance the general customer experience in the tech support sector.</h4>
-        <div type="button" class="done" onclick="closeAbout()">Done</div>
-    </div>
+        <body>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-circle-info"></i>About</a></li>
+                        <li><a href="#"><i class="fa-regular fa-address-book"></i>Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="form-box">
+                    <h3 class="title1">Register</h3>
+                    <form autocomplete="off">
+                        <div id="signUpMessage" class="messageDiv" style="display: none;"></div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Username:" id="rname" required>
+                        </div>
 
+                        <div class="input-field">
+                            <input type="email" placeholder="Email:" id="remail" required>
+                        </div>
 
+                        <div class="input-field">
+                            <input type="password" placeholder="Password:" id="rpassword" required>
+                        </div>
 
+                        <button type="submit" id="submit-btn" class="btn">Sign Up</button>
+                        <h2 class="title">or continue with</h2>
+                        <button type="button" class="google"><img src="Image/pngwing.com.png" alt="">Sign Up with Google</button>
 
-    <div class="contacts-pop" id="contacts-pop">
-        <h1>Contact Us</h1>
-        <div class="Name">
-            <input type="text" placeholder="Name:">
-        </div>
-        <div class="Email">
-            <input type="text" placeholder="Email:">
-        </div>
-        <textarea type="text" class="Feedback" placeholder="Write your feedback"></textarea>
-        <div type="button" class="Contactus" onclick="closeContacts()">Submit</div>
-    </div>
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="navdiv">
-            <ul>
-                <li><a><div class="about" onclick="openAbout()"><i class="fa-solid fa-circle-info"></i> &nbsp;About</div></a></li>
-                <li><a><div class="contacts" onclick="openContacts()"><i class="fa-solid fa-address-book"></i> &nbsp;Contacts</div></a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-
-    <!-- Main Section -->
-    <div class="main-section">
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/xJmD98Q/matech-logo.png" alt="matech-logo" border="0"></a>
-    </div>
-
-
-    <!-- Sign-up Buttons -->
-    <div class="signup-container">
-        <div class="signup-box">
-            <h3>Sign Up As</h3>
-            <a href="register.html?role=Client">Client</a>
-        </div>
-        <div class="signup-box technician">
-            <h3>Sign Up As</h3>
-            <a href="register.html?role=Technician">Technician</a>
-        </div>
-        <div class="signup-box">
-            <h3>Sign Up As</h3>
-            <a href="register.html?role=Manager">Manager</a>
-        </div>
-    </div>
-
-
-
-
-
-
-</body>
-<script>
-    let about = document.getElementById("about-pop");
-    let conconcon = document.getElementById("container");
-    let contacts = document.getElementById("contacts-pop");
-    let logloglog = document.getElementById("logob");
-    let badi = document.getElementById("jok");
-    function openAbout(){
-         about.classList.add('open-popup');
-         logloglog.classList.add('hide-containers');
-         conconcon.classList.add('hide-container');
-         contacts.classList.remove('open-contacts');
-         badi.classList.add('budi');
-    }
-    function closeAbout(){
-         about.classList.remove('open-popup');
-         conconcon.classList.remove('hide-container');
-         logloglog.classList.remove('hide-containers');
-         badi.classList.remove('budi');
-    }
-
-
-
-
-    function openContacts(){
-         contacts.classList.add('open-contacts');
-         conconcon.classList.add('hide-container');
-         logloglog.classList.add('hide-containers');
-         about.classList.remove('open-popup');
-         badi.classList.add('budi');
-    }
-
-
-
-
-    function closeContacts(){
-         contacts.classList.remove('open-contacts');
-         conconcon.classList.remove('hide-container');
-         logloglog.classList.remove('hide-containers');
-         badi.classList.remove('budi');
-    }
-</script>
-</html>
+                        <p class="signup">Have an Account? <a href="Login.html" style="text-decoration: underline;">Sign In Now</a>.</p>
+                    </form>  
+                </div>
+            </div>
+        </body>
+    </html>

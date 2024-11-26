@@ -5,10 +5,6 @@
 }
 
 
-
-
-
-
 body {
     font-family: 'Poppins';
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../Image/19366.jpg');
@@ -23,15 +19,9 @@ body {
 }
 
 
-
-
 .budi {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Image/19366.jpg');
 }
-
-
-
-
 
 
 .navbar {
@@ -47,8 +37,6 @@ align-items: center;
 padding-right: 30px;
 border-radius: 0 0 35px 35px;
 }
-
-
 
 
 .navbar ul {
@@ -72,8 +60,6 @@ margin-right: 60px;
 }
 
 
-
-
 .navbar li a:hover {
     color: #2D55B4;
     cursor: pointer;
@@ -82,18 +68,10 @@ margin-right: 60px;
 
 
 
-
-
-
-
 .main-section {
     text-align: center;
     margin-top: 100px;
 }
-
-
-
-
 
 
 
@@ -142,16 +120,10 @@ margin-right: 60px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
-
 .signup-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 .signup-box h3 {
     font-size: 14px;
@@ -159,9 +131,6 @@ margin-right: 60px;
     color: #bbb;
     margin-bottom: 5px;
 }
-
-
-
 
 .signup-box a {
     color: white;
@@ -171,9 +140,6 @@ margin-right: 60px;
     display: block;
 }
 
-
-
-
 /* Technician button styling */
 .signup-box.technician {
     background-color: white;
@@ -181,15 +147,9 @@ margin-right: 60px;
     border: 2px solid #007bff;
 }
 
-
-
-
 .signup-box.technician a {
     color: #007bff;
 }
-
-
-
 
 /* Responsive styling */
 @media (max-width: 600px) {
@@ -198,17 +158,11 @@ margin-right: 60px;
         align-items: center;
     }
 
-
-
-
     .signup-box {
         width: 200px;
         margin: 10px 0;
     }
 }
-
-
-
 
 .about-pop{
     left: 30%;
@@ -222,15 +176,9 @@ margin-right: 60px;
     visibility: hidden;
 }
 
-
-
-
 .open-popup{
     visibility: visible;
 }
-
-
-
 
 .done {
     position:absolute;
@@ -247,16 +195,10 @@ margin-right: 60px;
     font-size: 15px;
 }
 
-
-
-
 .done:hover {
     cursor: pointer;
     background-color: rgb(52, 81, 146);
 }
-
-
-
 
 h1 {
     text-align: center;
@@ -266,9 +208,6 @@ h1 {
     margin-top: 20px
 }
 
-
-
-
 .about-pop h3 {
     text-align: center;
     font-family: 'Poppins';
@@ -277,9 +216,6 @@ h1 {
     font-size: 25px;
     margin-top: 30px;
 }
-
-
-
 
 .about-pop h4 {
     text-align: justify;
@@ -292,9 +228,6 @@ h1 {
     color: rgb(40,40,40);
 }
 
-
-
-
 .contacts-pop {
     left: 35%;
     top: 17%;
@@ -306,15 +239,9 @@ h1 {
     visibility: hidden;
 }
 
-
-
-
 .open-contacts{
     visibility: visible;
 }
-
-
-
 
 .Contactus {
     position:absolute;
@@ -331,16 +258,10 @@ h1 {
     font-size: 15px;
 }
 
-
-
-
 .Contactus:hover {
     cursor: pointer;
     background-color: rgb(52, 81, 146);
 }
-
-
-
 
 .Name input {
     font-family: sans-serif;
@@ -357,15 +278,9 @@ h1 {
     outline-color: #2D55B4;
 }
 
-
-
-
 .Name input:focus{
     border-color: #2D55B4;
 }
-
-
-
 
 .Email input {
     font-family: sans-serif;
@@ -384,15 +299,9 @@ h1 {
     padding: 15px;
 }
 
-
-
-
 .Email input:focus{
     border-color: #2D55B4;
 }
-
-
-
 
 textarea {
     font-family: sans-serif;
