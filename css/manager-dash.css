@@ -16,7 +16,6 @@ body {
     width: 260px;
 }
 
-
 .sidebar {
     position: absolute;
     width: 260px;
@@ -27,19 +26,14 @@ body {
     overflow: hidden;
 }
 
-
 .sidebar-wrapper:not(:hover) .sidebar {
     width: 150px;
 }
-
 
 .sidediv {
     padding: 20px;
     margin-top: 30px;
 }
-
-
-
 
 .sidebar a {
     text-decoration: none;
@@ -51,7 +45,6 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-
 .sidebar li {
     list-style: none;
     margin-bottom: 100px;
@@ -59,16 +52,13 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-
 .sidebar-wrapper:not(:hover) .sidebar li {
     font-size: 0;
 }
 
-
 .sidebar-wrapper:not(:hover) .sidebar i {
     font-size: 24px;
 }
-
 
 .sidediv i {
     margin-right: 10px;
@@ -76,11 +66,9 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-
 .sidebar li:hover {
     transform: translateX(10px);
 }
-
 
 .sidebar-wrapper .sidebar li {
     list-style: none;
@@ -89,6 +77,15 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+.sidebar-wrapper .sidebar li.active {
+    color: white;
+    border-left: 8px solid #ffffff;
+    padding-left: 10px;
+}
+
+ul li:nth-child(1){
+    font-weight: bolder;
+}
 
 .sidebar-wrapper .sidebar li.active {
     color: white;
@@ -96,30 +93,15 @@ body {
     padding-left: 10px;
 }
 
-
 ul li:nth-child(1){
     font-weight: bolder;
 }
-
-
-.sidebar-wrapper .sidebar li.active {
-    color: white;
-    border-left: 8px solid #ffffff;
-    padding-left: 10px;
-}
-
-
-ul li:nth-child(1){
-    font-weight: bolder;
-}
-
 
 .top-box{
     width: 100%;
     height: 100px;
     background-color: #ffffff;
 }
-
 
 .avatar {
     margin-left: auto;
@@ -132,7 +114,6 @@ ul li:nth-child(1){
     color: #313442;
 }
 
-
 .profile{
     position: absolute;
     font-family: Poppins;
@@ -142,19 +123,16 @@ ul li:nth-child(1){
     color: #2D55B4;
 }
 
-
 .content {
     margin-left: 125px;
     padding: 20px;
 }
-
 
 .content h1 {
     font-size: 24px;
     color: #2D55B4;
     margin-bottom: 20px;
 }
-
 
 .card {
     position: relative;
@@ -168,6 +146,7 @@ ul li:nth-child(1){
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
+
 .card2 {
     position: relative;
     width: 50%;
@@ -180,6 +159,7 @@ ul li:nth-child(1){
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
+
 .card3 {
     position: relative;
     width: 30%;
@@ -193,11 +173,9 @@ ul li:nth-child(1){
     gap: 20px;
 }
 
-
 .card .section {
     padding: 10px;
 }
-
 
 .section h3 {
     font-size: 18px;
@@ -205,12 +183,10 @@ ul li:nth-child(1){
     margin-bottom: 10px;
 }
 
-
 .section p {
     margin-bottom: 8px;
     font-size: 14px;
 }
-
 
 .completed {
     position: absolute;
@@ -223,20 +199,13 @@ ul li:nth-child(1){
     font-size: 15px;
 }
 
-
 .completed:hover {
     cursor: pointer;
 }
 
-
 .completed-status {
     background-image: linear-gradient(green, rgba(0, 182, 155, 0.3));
 }
-
-
-
-
-
 
 .komplitid {
     position: absolute;
@@ -251,14 +220,10 @@ ul li:nth-child(1){
     top: 6em;
     padding: 10px;
 }
+
 .notcompleted-status {
     background-image: linear-gradient(gray, rgba(220, 220, 220, 0.3));
 }
-
-
-
-
-
 
 .processing {
     position: absolute;
@@ -271,13 +236,9 @@ ul li:nth-child(1){
     font-size: 15px;
 }
 
-
-
-
 .processing:hover {
     cursor: pointer;
 }
-
 
 .processing-status {
     background-image: linear-gradient(green, rgba(0, 182, 155, 0.3));
@@ -285,7 +246,6 @@ ul li:nth-child(1){
 .notprocessing-status {
     background-image: linear-gradient(gray, rgba(220, 220, 220, 0.3));
 }
-
 
 .prusising {
     position: absolute;
@@ -301,7 +261,6 @@ ul li:nth-child(1){
     padding: 10px;
 }
 
-
 .rejected {
     position: absolute;
     top: 14.7em;
@@ -313,11 +272,9 @@ ul li:nth-child(1){
     font-size: 15px;
 }
 
-
 .rejected:hover {
     cursor: pointer;
 }
-
 
 .rejected-status {
     background-image: linear-gradient(green, rgba(0, 182, 155, 0.3));
@@ -325,7 +282,6 @@ ul li:nth-child(1){
 .notrejected-status {
     background-image: linear-gradient(gray, rgba(220, 220, 220, 0.3));
 }
-
 
 .rijiktid {
     position: absolute;
@@ -341,7 +297,6 @@ ul li:nth-child(1){
     padding: 10px;
 }
 
-
 .onhold {
     position: absolute;
     top: 18.7em;
@@ -353,11 +308,9 @@ ul li:nth-child(1){
     font-size: 15px;
 }
 
-
 .onhold:hover {
     cursor: pointer;
 }
-
 
 .onhold-status {
     background-image: linear-gradient(green, rgba(0, 182, 155, 0.3));
@@ -365,9 +318,6 @@ ul li:nth-child(1){
 .notonhold-status {
     background-image: linear-gradient(gray, rgba(220, 220, 220, 0.3));
 }
-
-
-
 
 .onhuld {
     position: absolute;
@@ -383,7 +333,6 @@ ul li:nth-child(1){
     padding: 10px;
 }
 
-
 #separate {
     height: 300px;
     width: 1px;
@@ -392,7 +341,6 @@ ul li:nth-child(1){
     left: 33%;
     margin-top: 20px;
 }
-
 
 #separate-2 {
     height: 300px;
@@ -403,14 +351,12 @@ ul li:nth-child(1){
     margin-top: 20px;
 }
 
-
 h4 {
     font-size: 15px;
     font-weight: 100;
     padding: 10px;
     margin-top: 5px
 }
-
 
 .slideshow-container {
     position: relative;
@@ -420,7 +366,6 @@ h4 {
     border-radius: 10px;
 }
 
-
 .slides {
     position: absolute;
     width: 100%;
@@ -428,4 +373,5 @@ h4 {
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    border-radius: 10px;
 }

@@ -14,8 +14,8 @@
             <div class="sidebar">
                 <div class="sidediv">
                     <ul>
-                        <li class="active"><a href="manager_hist.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                        <li><a href="#"><i class="fa-solid fa-note-sticky"></i>Manage</a></li>
+                        <li class="active"><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <li><a href="review.html"><i class="fa-solid fa-note-sticky"></i>Manage</a></li>
                         <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
                         <li><a href="manager_hist.html"><i class="fa-regular fa-file"></i>History</a></li>
                         <li><a href="manager_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
@@ -60,8 +60,7 @@
                 let processing = document.getElementById("processing");
                 let rejected = document.getElementById("rejected");
                 let onhold = document.getElementById("onhold");
-               
-               
+        
                 function completedStatus() {
                     completed.classList.add('completed-status');
                     processing.classList.add('notprocessing-status');
@@ -84,9 +83,6 @@
                     onhold.classList.add('notonhold-status');
                 }
 
-
-
-
                 function onholdStatus() {
                     onhold.classList.add('onhold-status');
                     onhold.classList.remove('notonhold-status');
@@ -107,7 +103,6 @@
                 <img class="slides" src="https://i.ibb.co/BqrZRN5/quote4.jpg" alt="Slide 4">
                 <img class="slides" src="https://i.ibb.co/Dgt3zyk/quote5.jpg" alt="Slide 5">
             </div>
-
 
             <script>
                 let currentSlide = 0;
