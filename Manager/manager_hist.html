@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="stylesheet" href="../css/hist_manager.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="module" src="/JS/manager_hist.js"></script>
+    <title>Manager History</title>
+</head>
+<body>
+    <div id="rectangle-top"></div>
+    <div class="sidebar">
+        <div class="sidediv">
+            <ul>
+                <li><a href="manager_dash.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="review.html"><i class="fa-solid fa-note-sticky"></i>Assign</a></li>
+                <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
+                <li><a href="manager_hist.html"><i class="fa-regular fa-file"></i>History</a></li>
+                <li><a href="manager_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
+                <li><a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>
 
-    </head>
-    <body>
-        <div class="sidebar-wrapper">
-            <div class="sidebar">
-                <div class="sidediv">
-                    <ul>
-                        <li><a href="manager_dash.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                        <li><a href="review.html"><i class="fa-solid fa-note-sticky"></i>To-Do</a></li>
-                        <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
-                        <li class="active">
-                            <a href="manager_hist.html"><i class="fa-regular fa-file"></i>History</a>
-                        </li>
-                        <li><a href="manager_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
-                        <li><a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="top-box">
-            <img src="avatar.png" alt="Avatar" class="avatar">
-        </div>
-        <h1 class="hist">History</h1>
-        <div class="table">
-            <table class="table-content">
+    <h1>Tickets</h1>
+
+    <div class="rectangle-1">
+        <table class="list_review" id="employeeList">
+            <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>DATE</th>
-                    <th>ISSUE</th>
-                    <th>TYPE</th>
-                    <th>STATUS</th>
+                    <th>Profile</th>
+                    <th>Name</th>
+                    <th>Ticket Title</th>
+                    <th>Time</th>
+                    <th>Assigned to</th>
+                    <th></th>
+                    <th></th>
                 </tr>
-            </table>
-        </div>
-    </body>
+            </thead>
+            <tbody class="title_body">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
 </html>

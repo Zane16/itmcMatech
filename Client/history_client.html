@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="stylesheet" href="../css/hist_client.css">
-    </head>
-    <body>
-        <div class="sidebar-wrapper">
-            <div class="sidebar">
-                <div class="sidediv">
-                    <ul>
-                        <li><a href="dashboard-client.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                        <li><a href="ticket.html"><i class="fa-solid fa-note-sticky"></i>Request</a></li>
-                        <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
-                        <li class="active">
-                            <a href="history_client.html"><i class="fa-regular fa-file"></i>History</a>
-                        </li>
-                        <li><a href="client_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
-                        <li><a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
-                    </ul>
-                </div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/hist_client.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="module" src="/JS/client_hist.js"></script>
+    <title>Ticket Review</title>
+</head>
+<body>
+    <div id="rectangle-top"></div>
+    <div class="sidebar">
+        <div class="sidediv">
+            <ul>
+                <li><a href="dashboard-client.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="ticket.html"><i class="fa-solid fa-note-sticky"></i>Assign</a></li>
+                <li><a href="#"><i class="fa-regular fa-comment"></i>Messages</a></li>
+                <li><a href="history_client.html"><i class="fa-regular fa-file"></i>History</a></li>
+                <li><a href="client_prof.html"><i class="fa-solid fa-gear"></i>Profile</a></li>
+                <li><a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+            </ul>
         </div>
-        <div class="top-box">
-            <img src="avatar.png" alt="Avatar" class="avatar">
-        </div>
-        <h1 class="hist">History</h1>
-        <div class="table">
-            <table class="table-content">
+    </div>
+
+    <h1>History</h1>
+
+    <div class="rectangle-1">
+        <table class="list_review" id="employeeList">
+            <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>DATE</th>
-                    <th>ISSUE</th>
-                    <th>TYPE</th>
-                    <th>STATUS</th>
+                    <th>Profile</th>
+                    <th>Name</th>
+                    <th>Ticket Title</th>
+                    <th>Time</th>
+                    <th>Assigned to</th>
+                    <th></th>
+                    <th></th>
                 </tr>
-            </table>
-        </div>
-    </body>
+            </thead>
+            <tbody class="title_body">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
 </html>

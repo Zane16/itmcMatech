@@ -144,8 +144,6 @@ async function fetchTechnicians() {
     }
 }
 
-// Handle the Review Button Click
-// Handle the Review Button Click in the Manager's code
 async function handleReview(event) {
     const ticketId = event.target.dataset.ticketId;
     const username = event.target.dataset.username;
@@ -170,7 +168,7 @@ async function handleReview(event) {
     modal.style.display = "block";
 
     closeModal.onclick = () => {
-        modal.style.display = "none"; // Close the modal
+        modal.style.display = "none"; 
     };
 
     confirmTechnicianButton.onclick = async () => {
@@ -188,15 +186,19 @@ async function handleReview(event) {
 
                 const ticketData = ticketSnapshot.data();
 
-                // Assign the technician to the ticket in the client ticket subcollection
+                
                 await updateDoc(ticketRef, { technicianId: selectedTechnicianId, status: "Assigned" });
 
-                // Also add the ticket to the technician's assignedTickets subcollection
+                
                 await addDoc(collection(db, "users", selectedTechnicianId, "assignedTickets"), ticketData);
 
-                alert("Technician assigned successfully!");
-                fetchAndDisplayTickets(); // Refresh the ticket list
-                modal.style.display = "none"; // Close modal
+                
+                const managerId = "manager123"; 
+                await addDoc(collection(db, "users", managerId, "history"), ticketData);
+
+                alert("Technician assigned and ticket saved to history successfully!");
+                fetchAndDisplayTickets(); 
+                modal.style.display = "none"; 
             } catch (error) {
                 console.error("Error assigning technician:", error);
                 alert("Failed to assign technician.");
@@ -208,22 +210,20 @@ async function handleReview(event) {
 }
 
 
-// Handle the Delete Button Click
 async function handleDelete(event) {
     const ticketId = event.target.dataset.ticketId;
     const ticketRef = doc(db, "users", event.target.closest("tr").dataset.userId, "userTickets", ticketId);
 
     try {
-        await deleteDoc(ticketRef); // Delete ticket from Firestore
+        await deleteDoc(ticketRef); 
         alert("Ticket deleted successfully!");
-        fetchAndDisplayTickets(); // Refresh the ticket list
+        fetchAndDisplayTickets(); 
     } catch (error) {
         console.error("Error deleting ticket:", error);
         alert("Failed to delete ticket.");
     }
 }
 
-// Initialize Page
 window.onload = async () => {
     const modal = document.getElementById("reviewModal");
     modal.style.display = "none"; // Hide modal initially
